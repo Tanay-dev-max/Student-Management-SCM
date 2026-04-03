@@ -1,0 +1,19 @@
+name: SCM Build Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - development
+      - feature-login
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build verification
+        run: echo "SCM Build Successful"
